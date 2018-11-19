@@ -1,9 +1,9 @@
 package com.example.android.miwok;
 
-public class Word {
+class Word {
 
     /** Default translation for the word */
-    private String mDefaultTranslation;
+    private final String mDefaultTranslation;
 
     /** Miwok translation for the word */
     private String mMiwokTranslation;

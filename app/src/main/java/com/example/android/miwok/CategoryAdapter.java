@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 /**
  * Provides the appropriate {@link Fragment} for a view pager.
  */
-public class CategoryAdapter extends FragmentPagerAdapter {
+class CategoryAdapter extends FragmentPagerAdapter {
 
     public CategoryAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);

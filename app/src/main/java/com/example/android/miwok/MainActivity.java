@@ -15,9 +15,12 @@
  */
 package com.example.android.miwok;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
+import java.util.Objects;
 
 /**
  * Displays a {@link ViewPager} where each page shows a different day of the week.
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());
 
         // Set the adapter onto the view pager
-        viewPager.setAdapter(adapter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Objects.requireNonNull(viewPager).setAdapter(adapter);
+        }
     }
 }
